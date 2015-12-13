@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
@@ -17,7 +18,7 @@ namespace Beakn.RaspberryPi
 
         public void Setup()
         {
-            mqttClient = new MqttClient(Config.MqttHost, Config.MqttPort, false, null);
+            mqttClient = new MqttClient(Config.MqttHost);
             mqttClient.Connect(Config.MqttClientId, Config.MqttUsername, Config.MqttPassword);
 
             Console.WriteLine("Connected: " + mqttClient.IsConnected);
