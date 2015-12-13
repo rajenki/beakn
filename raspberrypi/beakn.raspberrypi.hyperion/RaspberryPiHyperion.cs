@@ -12,14 +12,14 @@ namespace Beakn.RaspberryPi
             {
                 case "DoNotDisturb":
                 case "Busy":
-                    hyperionParams = "-c red";
+                    hyperionParams = "-p 1 -c red";
                     break;
                 case "TemporarilyAway":
                 case "Away":
-                    hyperionParams = "-c yellow";
+                    hyperionParams = "-p 1 -c yellow";
                     break;
                 case "Free":
-                    hyperionParams = "-c green";
+                    hyperionParams = "-p 1 -c green";
                     break;
                 default:
                     return;
